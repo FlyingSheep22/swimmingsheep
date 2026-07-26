@@ -1,0 +1,159 @@
+.block {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.header h2 {
+    margin-bottom: 0;
+    font-size: 2cqw;
+}
+
+.updated {
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1.55fr)
+        minmax(220px, 0.95fr);
+
+    grid-template-rows:
+        minmax(150px, auto)
+        minmax(165px, auto)
+        minmax(120px, auto);
+
+    grid-template-areas:
+        "status status listening"
+        "reading working listening"
+        "reading playing playing";
+
+    gap: 1rem;
+}
+
+.card {
+    padding: 1.25rem;
+    outline: 1px solid black;
+    /* background: #dedede; */
+}
+
+.status {
+    grid-area: status;
+}
+
+.listening {
+    grid-area: listening;
+}
+
+.reading {
+    grid-area: reading;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.working {
+    grid-area: working;
+}
+
+.playing {
+    grid-area: playing;
+}
+
+.label {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.largeText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: calc(100% - 2.5rem);
+
+    margin: 0;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.bookCover {
+    width: min(100%, 165px);
+    aspect-ratio: 3 / 4;
+
+    margin: auto auto 0.75rem;
+    background: #888;
+}
+
+.itemTitle {
+    margin: 0;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.songWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            "status status"
+            "working listening"
+            "reading listening"
+            "reading playing";
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .updated {
+        white-space: normal;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "status"
+            "working"
+            "playing"
+            "listening"
+            "reading";
+    }
+
+    .card {
+        min-height: 160px;
+    }
+
+    .reading,
+    .listening {
+        min-height: auto;
+    }
+}

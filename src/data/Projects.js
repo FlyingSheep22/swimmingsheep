@@ -23,11 +23,13 @@ const PPEVideo = "/videos/PPE.mp4"
 const PDD = "/images/projects/PDD.png"
 const UF = "/images/projects/UF.png"
 
+const placeholderVideo = "/videos/Placeholder.mp4"
+
 export const projects = [
 
     {
         name: "Pose Pose Execution",
-        video: [PPEVideo],
+        video: [placeholderVideo],
         category: "App Development",
         tools: "Unity, C#",
         images: [PPE, PPE],
@@ -39,6 +41,7 @@ export const projects = [
 
     {
         name: "Pas de Deux: The Chaos Ballet",
+        video: [placeholderVideo],
         category: "Game Development",
         tools: "Unity, C#",
         images: [PDD, pdd2],
@@ -52,6 +55,7 @@ export const projects = [
 
     {
         name: "Underfished",
+        video: [placeholderVideo],
         category: "Game Development",
         tools: "Unity, C#",
         images: [UF, underfished2],

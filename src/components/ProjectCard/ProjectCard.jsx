@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image";
 import { useRef } from "react";
 import styles from "./ProjectCard.module.css";
@@ -17,7 +18,10 @@ export default function ProjectCard({ project }) {
   };
 
   return (
-    <article
+    <Link
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={styles.card}
       onMouseEnter={playVideo}
       onMouseLeave={stopVideo}
@@ -46,6 +50,6 @@ export default function ProjectCard({ project }) {
 
       <h3 className={styles.title}>{project.name}</h3>
       <p className={styles.tools}>{project.tools}</p>
-    </article>
+    </Link>
   );
 }

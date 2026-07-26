@@ -12,8 +12,7 @@
 
 .title {
   margin: 0;
-  font-weight: 50;
-  font-size: clamp(2rem, 1cqw, 3rem);
+  font-size: clamp(2rem, 2cqw, 3rem);
 }
 
 .seeAll {

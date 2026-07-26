@@ -6,7 +6,7 @@ import styles from "./Layout.module.css";
 export default function Layout({ children, sidebar = null }) {
   return (
     <div className={styles.page}>
-      <div className={styles.topStrip} />
+      {/* <div className={styles.topStrip} /> */}
 
       <Header />
 

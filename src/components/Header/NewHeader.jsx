@@ -6,9 +6,9 @@ export default function Header() {
   const router = useRouter();
 
   const links = [
+    { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
-    { label: "Art", href: "/art" },
-    { label: "About Me", href: "/about" },
+    { label: "Creative", href: "/creative" },
     { label: "Home", href: "/" },
   ];
 

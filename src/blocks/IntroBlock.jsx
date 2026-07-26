@@ -2,7 +2,8 @@ const ProfileImg = '/images/o5jmamjfajdz.png'
 const BannerImg = '/images/1892942565.jpg'
 
 import Image from "next/image";
-import SongsCard from "@/components/SongsCard/SongsCard";
+// import SongsCard from "@/components/SongsCard/SongsCard";
+import UtilityCard from "@/components/UtilityCard/UtilityCard";
 import styles from "./IntroBlock.module.css";
 
 export default function IntroBlock({ songInfo }) {
@@ -21,7 +22,7 @@ export default function IntroBlock({ songInfo }) {
         <div className={styles.profileText}>
           <h1 className={styles.nameTitle}>Kevin Bai</h1>
           <p className={styles.nameSubtitle}>
-            SwimmingSheep - Game Programmer, UI/UX, Artist
+            Game Programmer, UI/UX Design, Artist
           </p>
         </div>
       </section>
@@ -50,7 +51,8 @@ export default function IntroBlock({ songInfo }) {
         </div>
 
         <section className={styles.listening}>
-          <SongsCard songInfo={songInfo} />
+          {/* <SongsCard songInfo={songInfo} /> */}
+          <UtilityCard/>
         </section>
       </div>
     </div>

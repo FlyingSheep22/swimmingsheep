@@ -12,10 +12,6 @@ export default function Footer() {
         kevinycbai@gmail.com
       </a>
 
-      <p className={styles.phone}>
-        (613) 265-1862
-      </p>
-
       <p className={styles.copyright}>
         © {new Date().getFullYear()} SwimmingSheep
       </p>
