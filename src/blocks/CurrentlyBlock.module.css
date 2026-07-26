@@ -28,7 +28,7 @@
     grid-template-columns:
         minmax(0, 1fr)
         minmax(0, 1.55fr)
-        minmax(220px, 0.95fr);
+        minmax(220px, 1fr);
 
     grid-template-rows:
         minmax(150px, auto)
@@ -37,8 +37,8 @@
 
     grid-template-areas:
         "status status listening"
-        "reading working listening"
-        "reading playing playing";
+        "playing working listening"
+        "playing reading reading";
 
     gap: 1rem;
 }
@@ -46,7 +46,15 @@
 .card {
     padding: 1.25rem;
     outline: 1px solid black;
-    /* background: #dedede; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 160px;
+}
+
+.mediaWrapper {
+    width: 75%;
 }
 
 .status {
@@ -70,11 +78,13 @@
 
 .playing {
     grid-area: playing;
+    align-items: center;
 }
 
 .label {
     margin: 0 0 1rem;
     font-size: 1.1rem;
+    width: 100%
 }
 
 .largeText {
@@ -89,7 +99,7 @@
     font-size: clamp(2rem, 4vw, 3rem);
 }
 
-.bookCover {
+.gameCover {
     width: min(100%, 165px);
     aspect-ratio: 3 / 4;
 
@@ -101,11 +111,6 @@
     margin: 0;
     text-align: center;
     font-size: 1.1rem;
-}
-
-.songWrapper {
-    display: flex;
-    justify-content: center;
 }
 
 /* Tablet */
@@ -149,6 +154,9 @@
     }
 
     .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         min-height: 160px;
     }
 

@@ -12,6 +12,22 @@ function getTitle(property) {
     );
 }
 
+function getImage(property) {
+    const file = property?.files?.[0];
+
+    if (!file) return "";
+
+    if (file.type === "external") {
+        return file.external.url;
+    }
+
+    if (file.type === "file") {
+        return file.file.url;
+    }
+
+    return "";
+}
+
 function getRichText(property) {
     return (
         property?.rich_text
@@ -40,6 +56,7 @@ export default async function handler(req, res) {
             category:
                 page.properties.Category?.select?.name ?? "",
             text: getRichText(page.properties.Text),
+            image: getImage(page.properties.Image),
             url: page.properties.URL?.url ?? "",
             lastEditedTime: page.last_edited_time,
         }));

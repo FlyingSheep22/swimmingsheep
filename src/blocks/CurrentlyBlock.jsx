@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./CurrentlyBlock.module.css";
 import SongCard from "@/components/SongsCard/SongCard";
+import GameCard from "@/components/GameCard/GameCard";
 
 export default function CurrentlyBlock() {
     const [items, setItems] = useState([]);
@@ -32,9 +33,9 @@ export default function CurrentlyBlock() {
 
     const status = getItem("Status");
     const listening = getItem("Listening");
+    const playing = getItem("Playing");
     const reading = getItem("Reading");
     const working = getItem("Working");
-    const playing = getItem("Playing");
 
     const formattedLastUpdated = lastUpdated
         ? new Intl.DateTimeFormat("en-CA", {
@@ -68,21 +69,21 @@ export default function CurrentlyBlock() {
                 <article className={`${styles.card} ${styles.listening}`}>
                     <p className={styles.label}>Listening to...</p>
 
-                    <div className={styles.songWrapper}>
+                    <div className={styles.mediaWrapper}>
                         <SongCard spotifyUrl={listening?.url} />
                     </div>
                 </article>
 
-                <article className={`${styles.card} ${styles.reading}`}>
-                    <p className={styles.label}>Reading...</p>
+                <article className={`${styles.card} ${styles.playing}`}>
+                    <p className={styles.label}>Playing...</p>
 
-                    <div className={styles.bookCover}>
-                        {/* Replace with an Image later */}
+                    <div className={styles.mediaWrapper}>
+                        <GameCard
+                            name={playing?.text}
+                            coverUrl={playing?.image}
+                            gameUrl={playing?.url}
+                        />
                     </div>
-
-                    <p className={styles.itemTitle}>
-                        {reading?.text || "—"}
-                    </p>
                 </article>
 
                 <article className={`${styles.card} ${styles.working}`}>
@@ -93,11 +94,11 @@ export default function CurrentlyBlock() {
                     </p>
                 </article>
 
-                <article className={`${styles.card} ${styles.playing}`}>
-                    <p className={styles.label}>Playing...</p>
+                <article className={`${styles.card} ${styles.reading}`}>
+                    <p className={styles.label}>Reading...</p>
 
                     <p className={styles.largeText}>
-                        {playing?.text || "—"}
+                        {reading?.text || "—"}
                     </p>
                 </article>
             </div>

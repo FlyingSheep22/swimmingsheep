@@ -1,13 +1,16 @@
-function extractTrackId(spotifyUrl) {
+function extractSpotifyItem(spotifyUrl) {
   try {
     const url = new URL(spotifyUrl);
     const parts = url.pathname.split("/").filter(Boolean);
 
-    if (parts[0] !== "track" || !parts[1]) {
-      throw new Error("Invalid Spotify track URL");
+    const type = parts[0];
+    const id = parts[1];
+
+    if (!id || !["track", "album"].includes(type)) {
+        throw new Error("Unsupported Spotify URL");
     }
 
-    return parts[1];
+    return {type, id};
   } catch {
     throw new Error("Invalid Spotify track URL");
   }
@@ -43,11 +46,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    const trackId = extractTrackId(url);
+    const {type, id} = extractSpotifyItem(url);
     const accessToken = await getAccessToken();
 
     const response = await fetch(
-      `https://api.spotify.com/v1/tracks/${trackId}?market=CA`,
+      `https://api.spotify.com/v1/${type}s/${id}?market=CA`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -59,16 +62,29 @@ export default async function handler(req, res) {
       throw new Error("Failed to retrieve Spotify track");
     }
 
-    const track = await response.json();
+    const item = await response.json();
 
-    return res.status(200).json({
-      name: track.name,
-      artists: track.artists.map((artist) => artist.name),
-      album: track.album.name,
-      albumArt: track.album.images[0]?.url ?? "",
-      spotifyUrl: track.external_urls.spotify,
-      durationMs: track.duration_ms,
-    });
+    if (type === "track") {
+      return res.status(200).json({
+          type: "track",
+          name: item.name,
+          artists: item.artists.map((artist) => artist.name),
+          album: item.album.name,
+          albumArt: item.album.images[0]?.url ?? "",
+          spotifyUrl: item.external_urls.spotify,
+      });
+  }
+
+  if (type === "album") {
+      return res.status(200).json({
+          type: item.album_type, // "album", "single", or "compilation"
+          name: item.name,
+          artists: item.artists.map((artist) => artist.name),
+          album: item.name,
+          albumArt: item.images[0]?.url ?? "",
+          spotifyUrl: item.external_urls.spotify,
+      });
+  }
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
