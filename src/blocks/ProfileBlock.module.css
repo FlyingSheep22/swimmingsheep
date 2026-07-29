@@ -1,0 +1,129 @@
+.homeGrid {
+  --left-column: 35%;
+  --column-gap: 3rem;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, var(--left-column))
+    minmax(0, 1fr);
+
+  column-gap: var(--column-gap);
+
+  width: 100%;
+  align-items: stretch;
+}
+
+/*
+  This side dictates the total height because its image
+  has a predictable square aspect ratio.
+*/
+.profile {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  Three rows:
+
+  1. Introduction takes its natural content height
+  2. Banner receives all remaining height
+  3. Listening takes its natural content height
+*/
+.rightColumn {
+  min-width: 0;
+  min-height: 0;
+
+  display: grid;
+  grid-template-rows:
+    max-content
+    minmax(0, 1fr)
+    max-content;
+
+  row-gap: 1.5rem;
+}
+
+.introduction {
+  min-width: 0;
+}
+
+.listening {
+  min-width: 0;
+  min-height: 0;
+}
+
+.listening > * {
+  width: 100%;
+}
+
+.profileImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #ccc;
+}
+
+.profileText {
+  margin-top: 0.5rem;
+}
+
+.nameTitle {
+  margin: 0;
+  font-size: 3.5cqw;
+  font-weight: 100;
+}
+
+.nameSubtitle {
+  margin: 0.15rem 0 0;
+  font-size: 1.1rem;
+}
+
+.introductionTitle {
+  font-size: 2.5cqw;
+  margin: 0;
+}
+
+.introductionDescription {
+  margin: 0.25rem 0 0;
+}
+
+.profileImage,
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.banner {
+  width: 100%;
+  min-height: 0;
+}
+
+.bannerPlaceholder {
+  min-height: 0;
+  width: 100%;
+
+  background: #ccc;
+}
+
+@media (max-width: 850px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .rightColumn {
+    grid-template-rows:
+      max-content
+      auto
+      max-content;
+  }
+
+  .bannerPlaceholder {
+    aspect-ratio: 16 / 5;
+  }
+}

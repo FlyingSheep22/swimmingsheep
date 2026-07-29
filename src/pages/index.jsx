@@ -12,7 +12,7 @@ import SeparatorBlock from "@/blocks/SeparatorBlock";
 import { useState, useEffect } from 'react'
 // import Layout from "@/components/Layout.jsx";
 
-function Personal(){
+function Home(){
 
     const [notionData, setNotionData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -43,7 +43,7 @@ function Personal(){
     return (
         <Layout>
             <Blocks>
-                <IntroBlock songInfo={notionData}/>
+                <IntroBlock/>
                 <SeparatorBlock/>
                 <ProjectsBlock/>
                 <SeparatorBlock/>
@@ -57,4 +57,4 @@ function Personal(){
 
 }
 
-export default Personal
+export default Home

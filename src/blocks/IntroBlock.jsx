@@ -6,7 +6,7 @@ import Image from "next/image";
 import UtilityCard from "@/components/UtilityCard/UtilityCard";
 import styles from "./IntroBlock.module.css";
 
-export default function IntroBlock({ songInfo }) {
+export default function IntroBlock() {
   return (
     <div className={styles.homeGrid}>
       <section className={styles.profile}>
