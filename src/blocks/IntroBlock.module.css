@@ -69,7 +69,7 @@
 
 .nameTitle {
   margin: 0;
-  font-size: 3.5cqw;
+  font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 100;
 }
 

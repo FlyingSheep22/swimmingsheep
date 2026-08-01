@@ -1,5 +1,5 @@
 import { projects } from "@/data/Projects.js";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import ProjectPreviewCard from "@/components/ProjectPreviewCard/ProjectPreviewCard";
 import styles from "./ProjectsBlock.module.css";
 
 export default function ProjectsBlock() {
@@ -21,7 +21,7 @@ export default function ProjectsBlock() {
 
       <div className={styles.grid}>
         {featuredProjects.map((project) => (
-          <ProjectCard
+          <ProjectPreviewCard
             key={project.name}
             project={project}
           />

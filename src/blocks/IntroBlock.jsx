@@ -1,8 +1,7 @@
 const ProfileImg = '/images/o5jmamjfajdz.png'
-const BannerImg = '/images/1892942565.jpg'
+const BannerImg = '/images/abstractblue.jpg'
 
 import Image from "next/image";
-// import SongsCard from "@/components/SongsCard/SongsCard";
 import UtilityCard from "@/components/UtilityCard/UtilityCard";
 import styles from "./IntroBlock.module.css";
 
