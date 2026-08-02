@@ -17,7 +17,7 @@ const BE = "/projects/Behaviour/behaviour.jpg"
 const BE1 = "/projects/Behaviour/BE1.jpg"
 
 const PPE = "/projects/PPE/PPE.png"
-const PPEVideo = "/projects/PPE/PPE.mov"
+const PPEVideo = "/projects/PPE/PPE.mp4"
 const PPE1 = "/projects/PPE/PPE1.png"
 const PPE2 = "/projects/PPE/PPE2.png"
 const PPE3 = "/projects/PPE/PPE3.png"
