@@ -21,7 +21,7 @@
 
 .left h2 {
     margin-bottom: 1rem;
-    font-size: 2cqw;
+    font-size: clamp(1rem, 2cqw, 3rem);
 }
 
 .subtitle {
@@ -90,8 +90,8 @@
 }
 
 .link h3 {
-    font-size: 2cqw;
-    margin: 1cqw
+    font-size: 2rem;
+    margin: 10%
 }
 
 .link:hover {
