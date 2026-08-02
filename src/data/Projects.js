@@ -55,7 +55,7 @@ const martlet = "/projects/martlet/martlet.jpg";
 const martlet1 = "/projects/martlet/martlet1.png";
 const martlet2 = "/projects/martlet/martlet2.jpg";
 
-const placeholderVideo = "/videos/Placeholder.mp4"
+const placeholderVideo = "/videos/placeholder.mp4"
 
 export const projects = [
 
