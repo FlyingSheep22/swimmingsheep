@@ -23,6 +23,7 @@ const PPE2 = "/projects/PPE/PPE2.png"
 const PPE3 = "/projects/PPE/PPE3.png"
 
 const PDD = "/projects/PDD/PDD.png"
+const PDDVideo = "/projects/PDD/PDDVideo.mp4"
 const pdd1 = "/projects/PDD/pdd1.png";
 const pdd2 = "/projects/PDD/pdd2.png";
 const pdd3 = "/projects/PDD/pdd3.png";
@@ -90,7 +91,7 @@ export const projects = [
         
         previewPositionY: "0%",
         previewImage: PPE,
-        previewVideo: [placeholderVideo],
+        previewVideo: [PPEVideo],
         media: [
             {
                 type: "image",
@@ -133,7 +134,7 @@ export const projects = [
         
         previewPositionY: "0%",
         previewImage: PDD,
-        previewVideo: [placeholderVideo],
+        previewVideo: [PDDVideo],
         media: [
             {
                 type: "image",
@@ -148,8 +149,8 @@ export const projects = [
                 src: pdd3,
             },
             {
-                type: "image",
-                src: pdd4,
+                type: "video",
+                src: PDDVideo,
             },
         ],
 
