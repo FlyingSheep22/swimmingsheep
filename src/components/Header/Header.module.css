@@ -9,7 +9,7 @@
 }
 
 .nav {
-  min-height: 56px;
+  height: 6vh;
 
   display: flex;
   justify-content: flex-end;

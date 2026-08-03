@@ -1,19 +1,23 @@
-import styles from "./GridWithHeader.module.css"
+import styles from "./Grid.module.css"
+import Image from "next/image";
 
-export default function GridWithHeader({
-    headerText, gridItems, columns
+export default function Grid({
+    gridItems, columns
 }
 ) {
 
   return (
     <section className={styles.container}>
-        <h1 className={styles.header}>{headerText}</h1>
         <div className={styles.grid}
                 style={{"--columns": columns}}>
             {gridItems.map((item, index) => (
                 <div className={styles.item}>
-                    <img
+                    <Image
                         src={item.image}
+                        alt={item.name}
+                        title={item.name}
+                        width={70}
+                        height={70}
                     />
                 </div>
             ))}
