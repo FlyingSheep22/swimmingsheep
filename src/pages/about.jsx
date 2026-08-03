@@ -4,17 +4,20 @@ import Layout from "@/components/Layout/LayoutNew";
 import Blocks from "@/components/Layout/Blocks"
 
 import ProfileBlock from "@/blocks/ProfileBlock";
-import UnderConstruction from "@/components/UnderConstruction/UnderConstruction";
+import ResumeBlock from "@/blocks/ResumeBlock";
+import SeparatorBlock from "@/blocks/SeparatorBlock";
 
 function About(){
 
     return (
-        <UnderConstruction/>
-        // <Layout>
-        //     <Blocks>
-        //         <ProfileBlock/>
-        //     </Blocks>
-        // </Layout>
+        <Layout>
+            <Blocks>
+                <ProfileBlock/>
+                <SeparatorBlock/>
+                <ResumeBlock/>
+                <SeparatorBlock/>
+            </Blocks>
+        </Layout>
     )
 }
 

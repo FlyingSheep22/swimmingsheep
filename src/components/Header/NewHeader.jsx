@@ -6,10 +6,10 @@ export default function Header() {
   const router = useRouter();
 
   const links = [
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
     { label: "Creative", href: "/creative" },
-    { label: "Home", href: "/" },
   ];
 
   return (
