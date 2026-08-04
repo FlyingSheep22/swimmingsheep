@@ -4,6 +4,7 @@ import { projects } from "@/data/Projects";
 import { useRouter } from "next/router";
 
 import styles from "@/stylesheets/projects.module.css";
+import Head from "next/head";
 
 export default function ProjectsPage() {
     const router = useRouter();
@@ -11,24 +12,30 @@ export default function ProjectsPage() {
     console.log(selectedProject);
     
     return (
-        <Layout>
-            <main className={styles.page}>
-                <h1 className={styles.heading}>Projects</h1>
+        <div>
+            <Head>
+                <title>Projects | Kevin Bai</title>
+            </Head>
 
-                <div className={styles.projects}>
-                    {projects.map((project, index) => (
-                        <ProjectCard
-                            key={project.slug ?? project.name}
-                            project={project}
-                            defaultOpen={
-                                router.isReady &&
-                                Boolean(project.slug) &&
-                                selectedProject === project.slug
-                            }
-                        />
-                    ))}
-                </div>
-            </main>
-        </Layout>
+            <Layout>
+                <main className={styles.page}>
+                    <h1 className={styles.heading}>Projects</h1>
+
+                    <div className={styles.projects}>
+                        {projects.map((project, index) => (
+                            <ProjectCard
+                                key={project.slug ?? project.name}
+                                project={project}
+                                defaultOpen={
+                                    router.isReady &&
+                                    Boolean(project.slug) &&
+                                    selectedProject === project.slug
+                                }
+                            />
+                        ))}
+                    </div>
+                </main>
+            </Layout>
+        </div>
     );
 }

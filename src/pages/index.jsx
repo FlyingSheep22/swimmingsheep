@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import Layout from "@/components/Layout/LayoutNew";
 import Blocks from "@/components/Layout/Blocks"
@@ -41,17 +42,24 @@ function Home(){
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <Layout>
-            <Blocks>
-                <IntroBlock/>
-                <SeparatorBlock/>
-                <ProjectsBlock/>
-                <SeparatorBlock/>
-                <ExploreBlock/>
-                <SeparatorBlock/>
-                <CurrentlyBlock/>
-            </Blocks>
-        </Layout>
+        <>
+            <Head>
+                <title>Home | Kevin Bai</title>
+            </Head>
+
+            <Layout>
+                <Blocks>
+                    <IntroBlock/>
+                    <SeparatorBlock/>
+                    <ProjectsBlock/>
+                    <SeparatorBlock/>
+                    <ExploreBlock/>
+                    <SeparatorBlock/>
+                    <CurrentlyBlock/>
+                </Blocks>
+            </Layout>
+        </>
+        
 
     )
 

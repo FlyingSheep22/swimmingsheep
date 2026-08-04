@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 import Layout from "@/components/Layout/LayoutNew";
 import Blocks from "@/components/Layout/Blocks"
@@ -10,14 +11,20 @@ import SeparatorBlock from "@/blocks/SeparatorBlock";
 function About(){
 
     return (
-        <Layout>
-            <Blocks>
-                <ProfileBlock/>
-                <SeparatorBlock/>
-                <ResumeBlock/>
-                <SeparatorBlock/>
-            </Blocks>
-        </Layout>
+        <>
+            <Head>
+                <title>About | Kevin Bai</title>
+            </Head>
+
+            <Layout>
+                <Blocks>
+                    <ProfileBlock/>
+                    <SeparatorBlock/>
+                    <ResumeBlock/>
+                    <SeparatorBlock/>
+                </Blocks>
+            </Layout>
+        </>
     )
 }
 
