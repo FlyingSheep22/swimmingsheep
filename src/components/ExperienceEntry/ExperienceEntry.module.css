@@ -44,10 +44,10 @@
 }
 
 .logoWrapper {
-    align-items: right;
-    justify-content: right;
     position: relative;
-    height: 100%
+
+    width: 180px;
+    height: 45px;
 }
 
 .logo {

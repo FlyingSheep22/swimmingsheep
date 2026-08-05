@@ -16,8 +16,8 @@ export default function Grid({
                         src={item.image}
                         alt={item.name}
                         title={item.name}
-                        width={70}
-                        height={70}
+                        width={40}
+                        height={40}
                     />
                 </div>
             ))}

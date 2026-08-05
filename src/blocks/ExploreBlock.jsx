@@ -14,14 +14,14 @@ const links = [
 
     {
         title: "Projects",
-        description: "All Projects I've worked on",
+        description: "All development projects I've worked on",
         href: "/projects",
     },
     
     {
         title: "Creative",
-        description: "UI/UX, Graphic Design, Digital Art",
-        href: "/contact",
+        description: "Artworks, Concept Art, this page is a WIP",
+        href: "/creative",
     },
 ];
 

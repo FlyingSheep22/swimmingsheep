@@ -4,6 +4,7 @@ const BannerImg = '/images/1892942565.jpg'
 import Image from "next/image";
 import styles from "./ProfileBlock.module.css";
 import Grid from "@/components/Grid/Grid";
+import SeparatorBlock from "./SeparatorBlock";
 
 const Skills = [
     {
@@ -88,18 +89,18 @@ export default function ProfileBlock() {
           <p className={styles.description}>
             My name is Kevin, I’m a 20 year old Software Engineering student in my fourth year at McGill University.
             I am a passionate game developer, with a particular interest in UI/UX Design/Programming, and graphic design.
+
             <br/><br/>
-            assad
+
+            I was born in Montreal but grew up in Ottawa, Ontario.
+
+            <br/><br/>
+
+            I am yet again struggling to fill up space here. I will revisit this paragraph later. One two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty
           </p>
         </section>
 
-        <section className={styles.rightSideBox}>
-          <h1>Skills</h1>
-          <Grid
-            gridItems={Skills}
-            columns={7}
-          />
-        </section>
+        <SeparatorBlock/>
 
         <section className={styles.rightSideBox}>
           <h1>
@@ -107,10 +108,21 @@ export default function ProfileBlock() {
           </h1>
 
           <p className={styles.description}>
-            Game Development, UI Programming, Gameplay Programming, Graphic Design, UI/UX Design, Web 
-            Design, Game Design, Digital Art
+            Game Development, UI/UX Programming, Gameplay Programming, Graphic Design, UI/UX Design, Web 
+            Design
           </p>
         </section>
+
+        <SeparatorBlock/>
+
+        <section className={styles.rightSideBox}>
+          <h1>Skills</h1>
+          <Grid
+            gridItems={Skills}
+            columns={12}
+          />
+        </section>
+        
       </div>
       
       <section className={styles.profile}>
