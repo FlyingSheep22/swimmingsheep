@@ -84,7 +84,7 @@ export default function UtilityCard() {
 
     const date = new Intl.DateTimeFormat("en-CA", {
         timeZone: TIME_ZONE,
-        weekday: "long",
+        weekday: "short",
         month: "long",
         day: "numeric",
     }).format(now);
