@@ -33,11 +33,10 @@ export default function IntroBlock() {
           </h1>
 
           <p className={styles.introductionDescription}>
-            This site is a work in progress!!! - Revamp started in July 2026
-            <br/> <br/>
-            Thank you for visiting my website! My name is Kevin Bai. In this website you'll find a glimpse of who I am, what I do, etc. I'm running out of words to put in this paragraph, what should I put here.
+            Thank you for visiting my website! My name is Kevin Bai. I'm an avid Game Developer, Artist, UI/UX designer, and amateur web developper.
+            In this website you'll find a glimpse of who I am, what I do, etc. 
             <br/><br/>
-            For further inquiries, please feel free to reach out to me <a href="mailto:kevinycbai@gmail.com">via email.</a> I'll be happy to respond :)
+            For any inquiries, please feel free to reach out to me <a href="mailto:kevinycbai@gmail.com">via email.</a> I'll be happy to respond in a timely manner :)
           </p>
         </section>
 

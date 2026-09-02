@@ -61,7 +61,7 @@ const placeholderVideo = "/videos/placeholder.mp4"
 export const projects = [
 
     {
-        name: "Unannounced AAA Game - Behaviour",
+        name: "Exterminauts - Behaviour Interactive",
         slug: "behaviour",
         date: "May 2026 - Aug 2026",
 
@@ -72,15 +72,27 @@ export const projects = [
                 type: "image",
                 src: BE1,
             },
+            {
+                type: "youtube",
+                src: "mZpuTvlOxUw",
+            },
         ],
 
-        category: "App Development",
+        category: "Game Development",
         descriptors: "Unreal, C++, UI/UX, Internship",
         tools: "Unreal Engine 5.8, C++, Slate/UMG, MVVM, Figma, Jira/Confluence, Perforce4V",
-        overview: "Summer internship as a UI Programmer at Behaviour Interactive working on an unannounced AAA title.",
-        contribution: "Integrated with the rest of the UI/UX team (designers, artists, product, and programmers). I also used Jira and Confluence for project management/tracking.",
+        overview: "Summer internship as a UI Programmer at Behaviour Interactive working on Exterminauts, a three-player Third-Person PvE Shooter. Worked in Unreal Engine 5.8 and C++.",
+        contribution: "Integrated with the rest of the UI/UX team (designers, artists, product, and programmers) to implement UI/UX features, and bug fixes. I also used Jira and Confluence for project management/tracking.",
         
         links: [
+            {
+                link: 'https://store.steampowered.com/app/4039200/Exterminauts/',
+                name: "Steam Page"
+            },
+            {
+                link: 'https://youtu.be/mZpuTvlOxUw?si=NdFlH_fO-Ynt3z7W',
+                name: "Reveal Trailer"
+            },
         ]
     },
 
@@ -114,11 +126,15 @@ export const projects = [
         descriptors: "Unity, C#, UI/UX, Gameplay",
         tools: "Unity, C#, UI/UX, Gameplay, Figma, Miro",
         overview: <>
-            Pose Pose Execution is a 1v1 rhythm fighting game, inspired by dance battles and music of the 80s/90s. The game was a submission to the Ubisoft GameLab Competition 2026, and won both the <strong>Best User Experience</strong> 
-            and <strong>Audience Awards</strong>, along with being nominated for 6 awards in total including Best Game, Best Gameplay Design and more.
+            Pose Pose Execution is a 1v1 rhythm fighting game, inspired by dance battles and music of the 80s/90s. The game was a submission to the Ubisoft GameLab Competition 2026, and won both the <strong>Best User Experience</strong> and 
+            <strong> Audience Awards</strong>, along with being nominated for 6 awards in total including Best Game, Best Gameplay Design and more.
         </>,
-        contribution: "TBA",
-
+        contribution: 
+            <>
+            I was the lead UI/UX programmer for Pose Pose Execution, and contributed to the design as well. 
+            I was solely responsible for the creation of the interactive Tutorial level, and made major contributions to the HUD.
+            I also envisioned, designed and implemented the 3D interactive main menu, collaborating with artists to bring the scene to life.
+            </>,
         links: [
             {
                 link: "https://flyingsheep22.itch.io/pose-pose-execution",
@@ -158,11 +174,13 @@ export const projects = [
         tools: "Unity, C#, UI/UX, Figma, Procreate",
         overview: <>
         Co-op Comedy Ballerina Game submitted to the 2025 Ubisoft Game Lab Competition on behalf of McGill University,
-        winner of the <b>Jury's Award</b>. Developed across 10 weeks in a team of eight (four programmers, three artists and one designer). Acted as
-        the lead UI/UX developer and designer, as well as general gameplay prorammer. Was responsible
-        for developing all menus, in-game HUD and user experience feedback, as well as camera and object interactions systems.
+        winner of the <b>Jury's Award</b>. Developed across 10 weeks in a team of eight (four programmers, three artists and one designer).
         </>,
-        contribution: "TBA",
+        contribution: 
+        <>
+            I was the main UI/UX designer and programmer for Pas De Deux. I designed and implemented the main menu, along with drawing some UI Assets, major contributions to the HUD's design and implementation.
+            I also made contributions to miscellaneous systems throughout the game including the object interactions, Quick Time Events, and burning systems.
+        </>,
 
         links: [
             {
@@ -202,9 +220,12 @@ export const projects = [
 
         descriptors: "Unity, C#, UI/UX, Gameplay",
         tools: "Unity, C#",
-        overview: "Horror survival fishing game developed with a team of four in under 36 hours for McGill CodeJam 15, <b>winner of the Best Game Prize.</b> " +
-        "Acted as lead programmer for the project, responsible for core fishing gameplay, UI, and cutscene sequencing.",
-        contribution: "TBA",
+        overview: 
+        <>
+        Horror survival fishing game developed with a team of four in under 36 hours for McGill CodeJam 15, <b>winner of the Best Game Prize. </b> 
+        Acted as lead programmer for the project, responsible for core fishing gameplay, UI, and cutscene sequencing.
+        </>,
+        contribution: "I acted as the lead programmer for Underfished. I was responsible for most of the core feature of the game, including the fishing minigame, day-night cycle system/scene management, and all UI.",
         
          links: [
             {
@@ -286,9 +307,13 @@ export const projects = [
         descriptors: "Unity, C#, Educational",
         tools: "Unity, C#, MVVM, Unity UI",
         overview: "Visual novel puzzle game developed for RELG 368 (Japanese Religions in Popular Culture) class final project. " +
-        "Fully developed from scratch visual novel and investigation systems, drawing inspiration from games like Ace Attorney. " + 
-        "Created an MVVM-powered backend UI system that is very reusable and flexible.",
-        contribution: "TBA",
+        "Fully developed from scratch visual novel and investigation systems, drawing inspiration from games like Ace Attorney. ",
+        contribution: 
+        <>
+            I was the sole programmer and UX designer for PokéShin. I implemented all gameplay systems, including the point and click-minigame,
+            dialogue/visual-novel system, and a robust UI/Menu system. This project was also an attempt at familiarizing myself with building a UI
+            system from scratch, and experimenting for the first time with MVVM.
+        </>,
         
         links: [
             {
@@ -326,8 +351,8 @@ export const projects = [
         descriptors: "Unity, C#, GameJam",
         tools: "Unity, C#, Unity Cinemachine",
         overview: "Arcade style 2.5D platformer game where you play as Shelly the spider collecting bugs around the map. Developed in 48 hours for McGameJam 2025 as one of the programmers " +
-        "(consisting of four programmers, three artists and one designer). Was responsible for developing UI/HUD and Scene Management, Camera Management, Skin Changing System and other miscellaneous tasks.",
-        contribution: "TBA",
+        "(consisting of four programmers, three artists and one designer)",
+        contribution: "Was responsible for developing UI/HUD and Scene Management, Camera Management, Skin Changing System and other miscellaneous tasks.",
         
         links: [
             {
@@ -369,7 +394,7 @@ export const projects = [
         tools: "Unity, C#, Aseprite",
         overview: "Solo developed roguelike survival game passion project. Created using Unity, with all other assets drawn or sprited using Procreate and Aseprite. Extensively explored many different" +
              " Unity frameworks such as Cinemachine, UI and URP to create custom camera/lighting effects and cohesive, user-friendly UI, .",
-        contribution: "TBA",
+        contribution: "Sole programmer, designer and artist.",
         
         links: [
             {
@@ -407,7 +432,11 @@ export const projects = [
         descriptors: "Unity, C#, Hackathon",
         tools: "Unity, C#, Unity UI",
         overview: "Idle clicker-game inspired by McGill's beloved mascot, developed in 24 hours as part McHacks 12. Winner of the Chaotic Evil Hack Prize.",
-        contribution: "TBA",
+        contribution: <>
+            Lead programmer for the game, creating much of the clicker minigame and progression system.
+            As the only programmer on the team with a decent amount of Unity experience, I also provided some mentorship and guidance to the other
+            three team members to familiarize themselves with the tool.
+        </>,
 
         links: [
             {
@@ -455,9 +484,9 @@ export const projects = [
         descriptors: "Unity, C#, Figma, Hackathon",
         tools: "Unity, C#, .NET Interop Services",
         images: [duck, duckView],
-        overview: "Desktop Overlay Companion with Pomodoro and wellness checks through periodic self-care reminders. Developed fully in Unity using the UI system for all screens and transitions, " +
-         "as well as Microsoft's Interop Services to crete a fully functionning background overlay. Created in 36 hours with two teammates during McGill CodeJam 2024.",
-        contribution: "TBA",
+        overview: "Desktop Overlay Companion with Pomodoro and wellness checks through periodic self-care reminders. Created in 36 hours with two teammates during McGill CodeJam 2024.",
+        contribution: "Was one of three programmers who developed the app fully in Unity using the UI system for all screens and transitions, " +
+         "as well as Microsoft's Interop Services to create a fully functionning background overlay.",
         
         links: [
             {
@@ -502,6 +531,7 @@ export const projects = [
         images: [nepguinOpening, nepguinGame],
         overview: "Two-player cozy winter themed game about a penguin who charms snowmen to attack for it. Developed as a first Godot game in a team of four across 48 hours for Winter Melonjam 5. " +
         "Contributed to UI and Upgrade systems, and created all handrawn 2D Assets and UI visuals using Procreate.",
+        contribution: "Artist :)",
         
         links: [
             {
